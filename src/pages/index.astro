@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Mail from "../components/icons/Mail.astro";
+import ArrowDown from "../components/icons/ArrowDown.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Studies from "../components/Studies.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Book from "../components/icons/Book.astro";
+import Code from "../components/icons/Code.astro";
+import PhoneCall from "../components/icons/PhoneCall.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="px-4">
+    <SectionContainer id="home" class="">
+      <h1 class="text-6xl font-bold">Hi, I'm Maximo Dip</h1>
+      <h2 class="text-3xl font-semibold">Fullstack Developer</h2>
+      <p>University Software Engineer.</p>
+      <nav class="flex gap-2 mt-8 flex-wrap justify-center">
+        <SocialPill href="https://github.com/maximoaparicio">
+          <GitHub class="size-4 md:size-6" />
+          Github
+        </SocialPill>
+        <SocialPill href="https://www.linkedin.com/in/maximodipaparicio/">
+          <LinkedIn class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="mailto:maximodipaparicio@gmail.com">
+          <Mail class="size-4 md:size-6" />
+          maximodipaparicio@gmail.com
+        </SocialPill>
+      </nav>
+      <div class="w-full flex justify-center pt-32">
+        <ArrowDown />
+      </div>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-3xl flex items-center justify-center gap-2">
+        <Book />
+        Studies
+      </h2>
+      <Studies />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-3xl flex items-center justify-center gap-2">
+        <Code />
+        Projects
+      </h2>
+    </SectionContainer>
+    <SectionContainer id="contact">
+      <h2 class="text-3xl flex items-center justify-center gap-2">
+        <PhoneCall />
+        Contact
+      </h2>
+    </SectionContainer>
+  </main>
+</Layout>
