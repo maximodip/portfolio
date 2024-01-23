@@ -6,18 +6,19 @@ import Mail from "../components/icons/Mail.astro";
 import ArrowDown from "../components/icons/ArrowDown.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Studies from "../components/Studies.astro";
+import Contact from "../components/Contact.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Book from "../components/icons/Book.astro";
 import Code from "../components/icons/Code.astro";
 import PhoneCall from "../components/icons/PhoneCall.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Maximo | Dev Portfolio">
   <main class="px-4">
-    <SectionContainer id="home" class="">
-      <h1 class="text-6xl font-bold">Hi, I'm Maximo Dip</h1>
-      <h2 class="text-3xl font-semibold">Fullstack Developer</h2>
-      <p>University Software Engineer.</p>
+    <SectionContainer id="home" class="text-pretty">
+      <h1 class="text-6xl font-bold">Hi! I'm Maximo Dip</h1>
+      <h2 class="text-3xl font-semibold">Fullstack Engineer</h2>
       <nav class="flex gap-2 mt-8 flex-wrap justify-center">
         <SocialPill href="https://github.com/maximoaparicio">
           <GitHub class="size-4 md:size-6" />
@@ -49,11 +50,18 @@ import PhoneCall from "../components/icons/PhoneCall.astro";
         Projects
       </h2>
     </SectionContainer>
-    <SectionContainer id="contact">
+    <SectionContainer id="about">
+      <h2 class="text-3xl flex items-center justify-center gap-2">
+        <ProfileCheck />
+        About Me
+      </h2>
+    </SectionContainer>
+    <SectionContainer id="contact" class="">
       <h2 class="text-3xl flex items-center justify-center gap-2">
         <PhoneCall />
         Contact
       </h2>
+      <Contact />
     </SectionContainer>
   </main>
 </Layout>
