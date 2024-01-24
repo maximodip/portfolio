@@ -1,0 +1,85 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import React from "./icons/React.astro";
+import MySql from "./icons/MySql.astro";
+import Express from "./icons/Express.astro";
+import LinkButton from "./LinkButton.astro";
+
+const TAGS = {
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#23272f] text-white",
+    icon: React,
+  },
+  MYSQL: {
+    name: "MySql",
+    class: "bg-[#23272f] text-white",
+    icon: MySql,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-[#23272f] text-white",
+    icon: Express,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Stock App",
+    description:
+      "My application offers a seamless and user-friendly experience, empowering users with the ability to add, edit, and delete various product types across different categories, all in one centralized platform.",
+    github: "https://github.com/hugodanielcabral/proyectoprogramacion3",
+    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.TAILWIND, TAGS.MYSQL],
+  },
+  {
+    title: "Dog 360",
+    description:
+      "Welcome to my VET management application, redefining the way pet care professionals handle appointments and manage their canine clientele. Tailored to meet the unique needs of veterinary practices, our application seamlessly integrates appointment scheduling, detailed dog profiles, and user roles for a comprehensive and efficient solution.",
+    github: "https://github.com/hugodanielcabral/dog360",
+    image: "/projects/dog360.webp",
+    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.TAILWIND, TAGS.MYSQL],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, github }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-aqua/80 mb-2">{title}</h3>
+        <p class="text-lg mb-4 text-balance sm:text-pretty">{description}</p>
+        <ul class="flex gap-2 flex-row mb-2 flex-wrap">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          loading="lazy"
+          class="rounded shadow-2xl shadow-white/10 aspect-video"
+          src={image}
+          alt={`Captura de pantalla del proyecto ${image}`}
+        />
+        <footer class="flex gap-x-4 items-end justify-start mt-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Source Code
+            </LinkButton>
+          )}
+        </footer>
+      </article>
+    ))
+  }
+</div>
