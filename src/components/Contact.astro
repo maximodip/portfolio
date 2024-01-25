@@ -2,8 +2,17 @@
   <span class="text-left text-sm text-aqua/50">write your message for me</span>
   <div class="flex gap-x-4">
     <form action="POST">
-      <input type="text" placeholder="hello..." class="p-2 rounded" />
+      <textarea name="message" placeholder="hello..." class="p-2 rounded"
+      ></textarea>
     </form>
     <button type="submit">send</button>
   </div>
 </div>
+
+<style>
+  textarea {
+    box-shadow: none;
+    resize: none;
+    outline: none;
+  }
+</style>
