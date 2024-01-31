@@ -19,19 +19,19 @@ import About from "../components/About.astro";
 <Layout title="Maximo | Dev Portfolio">
   <main class="px-4">
     <SectionContainer id="home" class="text-pretty">
-      <h1 class="text-6xl font-bold">Hi! I'm Maximo Dip</h1>
+      <h1 class="text-6xl font-bold">Hey, i'm Maximo Dip</h1>
       <h2 class="text-3xl font-semibold">Fullstack Engineer</h2>
-      <nav class="flex gap-2 mt-8 flex-wrap justify-center">
+      <nav class="flex gap-2 flex-wrap justify-center">
         <SocialPill href="https://github.com/maximoaparicio">
-          <GitHub class="size-4 md:size-6" />
+          <GitHub class="size-4" />
           Github
         </SocialPill>
         <SocialPill href="https://www.linkedin.com/in/maximodipaparicio/">
-          <LinkedIn class="size-4 md:size-6" />
+          <LinkedIn class="size-4" />
           LinkedIn
         </SocialPill>
         <SocialPill href="mailto:maximodipaparicio@gmail.com">
-          <Mail class="size-4 md:size-6" />
+          <Mail class="size-4" />
           maximodipaparicio@gmail.com
         </SocialPill>
       </nav>
@@ -40,32 +40,32 @@ import About from "../components/About.astro";
       </div>
     </SectionContainer>
     <SectionContainer id="experience">
-      <h2 class="text-3xl flex items-center justify-center gap-2">
+      <h2 class="text-4xl flex items-center justify-center gap-2 opacity-70">
         <Book />
         Studies
       </h2>
       <Studies />
     </SectionContainer>
     <SectionContainer id="projects">
-      <h2 class="text-3xl flex items-center justify-center gap-2">
+      <h2 class="text-4xl flex items-center justify-center gap-2 opacity-70">
         <Code />
         Projects
       </h2>
       <Projects />
     </SectionContainer>
     <SectionContainer id="about">
-      <h2 class="text-3xl flex items-center justify-center gap-2">
+      <h2 class="text-4xl flex items-center justify-center gap-2 opacity-70">
         <ProfileCheck />
         About Me
       </h2>
       <About />
     </SectionContainer>
-    <!-- <SectionContainer id="contact" class="">
-      <h2 class="text-3xl flex items-center justify-center gap-2">
+    <SectionContainer id="contact" class="">
+      <h2 class="text-4xl flex items-center justify-center gap-2 opacity-70">
         <PhoneCall />
         Contact
       </h2>
       <Contact />
-    </SectionContainer> -->
+    </SectionContainer>
   </main>
 </Layout>
