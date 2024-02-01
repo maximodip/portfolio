@@ -4,6 +4,7 @@ import Tailwind from "./icons/Tailwind.astro";
 import React from "./icons/React.astro";
 import MySql from "./icons/MySql.astro";
 import Express from "./icons/Express.astro";
+import Boostrap from "./icons/Bootstrap.astro";
 import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
@@ -27,6 +28,11 @@ const TAGS = {
     class: "bg-[#23272f] text-white",
     icon: Express,
   },
+  BOOSTRAP: {
+    name: "Boostrap",
+    class: "bg-[#23272f] text-white",
+    icon: Boostrap,
+  },
 };
 const PROJECTS = [
   {
@@ -34,7 +40,7 @@ const PROJECTS = [
     description:
       "My application offers a seamless and user-friendly experience, empowering users with the ability to add, edit, and delete various product types across different categories, all in one centralized platform.",
     github: "https://github.com/hugodanielcabral/proyectoprogramacion3",
-    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.TAILWIND, TAGS.MYSQL],
+    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.BOOSTRAP, TAGS.MYSQL],
   },
   {
     title: "Dog 360",
@@ -47,13 +53,21 @@ const PROJECTS = [
 ];
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="flex flex-col gap-y-16 text-left">
   {
     PROJECTS.map(({ image, title, description, tags, github }) => (
       <article class="max-w-lg mx-auto">
-        <h3 class="text-3xl font-semibold text-aqua/80 mb-2">{title}</h3>
-        <p class="text-lg mb-4 text-balance sm:text-pretty">{description}</p>
-        <ul class="flex gap-2 flex-row mb-2 flex-wrap">
+        <h3 class="text-3xl font-semibold">{title}</h3>
+        <p class="text-sm mb-4 text-balance sm:text-pretty">{description}</p>
+        {image && (
+          <img
+            loading="lazy"
+            class="rounded shadow-2xl shadow-white/10"
+            src={image}
+            alt={`Captura de pantalla del proyecto ${image}`}
+          />
+        )}
+        <ul class="flex gap-2 flex-row mt-2 flex-wrap">
           {tags.map((tag) => (
             <li>
               <span
@@ -65,12 +79,6 @@ const PROJECTS = [
             </li>
           ))}
         </ul>
-        <img
-          loading="lazy"
-          class="rounded shadow-2xl shadow-white/10 aspect-video"
-          src={image}
-          alt={`Captura de pantalla del proyecto ${image}`}
-        />
         <footer class="flex gap-x-4 items-end justify-start mt-4">
           {github && (
             <LinkButton href={github}>
