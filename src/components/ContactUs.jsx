@@ -31,12 +31,12 @@ function ContactUs() {
         </div>
         <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
     <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-        type="text" placeholder="Name*" name="user_name"/>
+        type="text" placeholder="Name*" name="user_name" required/>
     <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-        type="text" placeholder="Email*" name="user_email"/>
+        type="text" placeholder="Email*" name="user_email" required/>
     </div>
     <div class="my-4">
-      <textarea placeholder="Message*" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="user_message"></textarea>
+      <textarea placeholder="Message*" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" name="user_message" required></textarea>
     </div>
     <div class="my-2 w-1/2 lg:w-1/4">
       <button class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
