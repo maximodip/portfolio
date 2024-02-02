@@ -40,7 +40,7 @@ function ContactUs() {
     </div>
     <div class="my-2 w-1/2 lg:w-1/4">
       <button class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
-                  focus:outline-none focus:shadow-outline" type="submit">
+                  focus:outline-none focus:shadow-outline z-50" type="submit">
         Send 
       </button>
     </div>
