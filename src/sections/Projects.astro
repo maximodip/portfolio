@@ -52,7 +52,7 @@ const PROJECTS = [
   {
     title: "Dog 360",
     description:
-      "Welcome to my VET management application, redefining the way pet care professionals handle appointments and manage their canine clientele. Tailored to meet the unique needs of veterinary practices, our application seamlessly integrates appointment scheduling, detailed dog profiles, and user roles for a comprehensive and efficient solution.",
+      "Tailored to meet the unique needs of veterinary practices, our application seamlessly integrates appointment scheduling, detailed dog profiles, and user roles for a comprehensive and efficient solution.",
     github: "https://github.com/hugodanielcabral/dog360",
     image: "/projects/dog360.webp",
     tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.TAILWIND, TAGS.MYSQL],
@@ -74,11 +74,11 @@ const PROJECTS = [
               {title}
             </h3>
             <div class="flex flex-wrap mt-2">
-              <ul class="flex flex-row mb-2 gap-x-2">
+              <ul class="flex flex-row mb-2 gap-x-2 flex-wrap">
                 {tags.map((tag) => (
                   <li>
                     <span
-                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                      class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
                     >
                       <tag.icon class="size-4" />
                       {tag.name}
