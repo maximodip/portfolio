@@ -1,0 +1,56 @@
+---
+import SectionContainer from "@/components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHub from "../icons/GitHub.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
+import Badge from "@/components/Badge.astro";
+---
+
+<SectionContainer id="hero">
+  <div class="flex flex-col gap-y-4">
+    <!-- <a
+      href="https://linkedin.com/in/maximoaparicio"
+      target="_blank"
+      rel="noopener"
+      class="md:hover:scale-105"
+    >
+      <Badge>Available for work</Badge>
+    </a> -->
+    <h1
+      class="text-6xl font-bold animate-fade-in animate-duration-normal"
+      aria-hidden="true"
+    >
+      Hey, i'm
+      <span class="text-gradient">Maximo Dip Aparicio</span>
+    </h1>
+    <h2
+      class="text-3xl font-semibold animate-fade-in animate-duration-slow"
+      aria-hidden="true"
+    >
+      Fullstack Engineer
+    </h2>
+
+    <nav class="flex gap-2 flex-wrap animate-fade-in animate-duration-slower">
+      <SocialPill href="https://github.com/maximoaparicio">
+        <GitHub class="size-4" />
+        Github
+      </SocialPill>
+      <SocialPill href="https://www.linkedin.com/in/maximodipaparicio/">
+        <LinkedIn class="size-4" />
+        LinkedIn
+      </SocialPill>
+      <SocialPill href="mailto:maximodipaparicio@gmail.com">
+        <Mail class="size-4" />
+        maximodipaparicio@gmail.com
+      </SocialPill>
+    </nav>
+  </div>
+</SectionContainer>
+<style>
+  .text-gradient {
+    background: linear-gradient(45deg, #2d6ca0, #7acded, #2d6ca0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
