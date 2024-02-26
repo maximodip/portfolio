@@ -1,72 +1,21 @@
 ---
-import ContactUs from "../components/ContactUs.jsx";
+import Layout from "@/layouts/Layout.astro";
 
-import Layout from "../layouts/Layout.astro";
-import GitHub from "../components/icons/GitHub.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import Mail from "../components/icons/Mail.astro";
-import ArrowDown from "../components/icons/ArrowDown.astro";
-import SocialPill from "../components/SocialPill.astro";
-import Studies from "../components/Studies.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Book from "../components/icons/Book.astro";
-import Code from "../components/icons/Code.astro";
-import PhoneCall from "../components/icons/PhoneCall.astro";
-import ProfileCheck from "../components/icons/ProfileCheck.astro";
-import Projects from "../components/Projects.astro";
-import About from "../components/About.astro";
+import Navbar from "@/components/Navbar.astro";
+import Presentation from "@/sections/Presentation.astro";
+import Studies from "@/sections/Studies.astro";
+import Projects from "@/sections/Projects.astro";
+import About from "@/sections/About.astro";
+import Footer from "@/sections/Footer.astro";
 ---
 
-<Layout title="Maximo | Dev Portfolio">
-  <main class="px-4">
-    <SectionContainer id="home" class="text-pretty">
-      <h1 class="text-6xl font-bold">Hey, i'm Maximo Dip</h1>
-      <h2 class="text-3xl font-semibold">Fullstack Engineer</h2>
-      <nav class="flex gap-2 flex-wrap justify-center">
-        <SocialPill href="https://github.com/maximoaparicio">
-          <GitHub class="size-4" />
-          Github
-        </SocialPill>
-        <SocialPill href="https://www.linkedin.com/in/maximodipaparicio/">
-          <LinkedIn class="size-4" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="mailto:maximodipaparicio@gmail.com">
-          <Mail class="size-4" />
-          maximodipaparicio@gmail.com
-        </SocialPill>
-      </nav>
-      <div class="w-full flex justify-center pt-32">
-        <ArrowDown />
-      </div>
-    </SectionContainer>
-    <SectionContainer id="experience">
-      <h2 class="text-4xl flex items-center justify-center gap-2 opacity-70">
-        <Book />
-        Studies
-      </h2>
-      <Studies />
-    </SectionContainer>
-    <SectionContainer id="projects">
-      <h2 class="text-4xl flex items-center justify-center gap-2 opacity-70">
-        <Code />
-        Projects
-      </h2>
-      <Projects />
-    </SectionContainer>
-    <SectionContainer id="about">
-      <h2 class="text-4xl flex items-center justify-center gap-2 opacity-70">
-        <ProfileCheck />
-        About Me
-      </h2>
-      <About />
-    </SectionContainer>
-    <SectionContainer id="contact" class="">
-      <h2 class="text-4xl flex items-center justify-center gap-2 opacity-70">
-        <PhoneCall />
-        Contact
-      </h2>
-      <ContactUs client:load />
-    </SectionContainer>
+<Layout title="Maximo - Dev Portfolio">
+  <Navbar />
+  <main>
+    <Presentation />
+    <Studies />
+    <Projects />
+    <About />
   </main>
+  <Footer />
 </Layout>

@@ -1,6 +1,6 @@
 ---
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Footer from "../sections/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 
 import "@fontsource-variable/onest";
 
@@ -12,7 +12,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="transition-all duration-500">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -25,43 +25,35 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="relative text-black dark:text-white min-h-[100dvh]">
-    <div
-      class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] z-[-2]"
-    >
+  <body>
+    <div class="relative h-full w-full bg-slate-950">
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"
+      >
+      </div>
     </div>
-    <Header />
-    <slot />
-    <Footer />
+    <div class="max-w-6xl px-2 lg:px-10 mx-auto">
+      <slot />
+    </div>
   </body>
 </html>
 <style is:global>
   :root {
-    color-scheme: light dark;
+    color: #1f1f1f;
+    background: #ddd;
+  }
+
+  .dark {
+    color: #ddd;
+    background: #1f1f1f;
   }
 
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
-    scroll-behavior: smooth;
-  }
 
-  body {
-    color: rgba(17, 17, 17, 0.9);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    overflow-x: hidden;
+
     overscroll-behavior: none;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    body {
-      color: rgba(255, 255, 255, 0.9);
-    }
+    scroll-behavior: smooth;
   }
 </style>
