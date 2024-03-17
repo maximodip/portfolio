@@ -7,7 +7,7 @@ import Mail from "../icons/Mail.astro";
 import Badge from "@/components/Badge.astro";
 ---
 
-<SectionContainer id="hero">
+<SectionContainer id="hero" class="text-center sm:text-left text-pretty">
   <div class="flex flex-col gap-y-4">
     <!-- <a
       href="https://linkedin.com/in/maximoaparicio"
@@ -31,7 +31,9 @@ import Badge from "@/components/Badge.astro";
       Fullstack Engineer
     </h2>
 
-    <nav class="flex gap-2 flex-wrap animate-fade-in animate-duration-slower">
+    <nav
+      class="flex gap-2 flex-wrap animate-fade-in animate-duration-slower justify-center sm:justify-start"
+    >
       <SocialPill href="https://github.com/maximoaparicio">
         <GitHub class="size-4" />
         Github

@@ -1,0 +1,25 @@
+---
+import CircleArrowUp from "@/icons/CircleArrowUp.astro";
+---
+
+<CircleArrowUp
+  class="m-5 size-12 fixed bottom-0 right-0 z-[99] cursor-pointer hidden shadow-sm sm:hover:opacity-30 sm:transition-all"
+  id="go-up-button"
+/>
+
+<script>
+  const scrollButton = document.getElementById("go-up-button");
+
+  window.addEventListener("scroll", function () {
+    // Si el usuario ha desplazado hacia abajo más de 200px, mostramos el botón, de lo contrario lo ocultamos
+    if (window.scrollY > 5) {
+      scrollButton?.classList.remove("hidden");
+    } else {
+      scrollButton?.classList.add("hidden");
+    }
+  });
+
+  scrollButton?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
