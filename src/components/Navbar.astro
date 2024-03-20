@@ -1,6 +1,7 @@
 ---
 import MenuToggle from "./MenuToggle.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+import UppercaseToggle from "./UppercaseToggle.astro";
 
 const navItems = [
   {
@@ -47,13 +48,15 @@ const navItems = [
         </a>
       ))
     }
-    <MenuToggle />
-    <span>Aa</span>
-    <span>EN</span>
-    <ThemeToggle />
+    <div class="flex items-center sm:ml-5 gap-x-3">
+      <MenuToggle />
+      <UppercaseToggle />
+      <span>EN</span>
+      <ThemeToggle />
+    </div>
   </nav>
   <div class="hidden" id="responsiveMenu">
-    <nav class="navbar fixed top-16 right-0 left-0">
+    <nav class="navbar fixed top-16 right-0 left-0 w-fit m-auto sm:hidden">
       {
         navItems.map((link) => (
           <a

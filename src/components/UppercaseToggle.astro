@@ -1,0 +1,12 @@
+<button id="uppercase-toggle"> Aa</button>
+
+<script>
+  const toggle = document.getElementById("uppercase-toggle");
+
+  function toggleUppercase() {
+    const element = document.documentElement;
+    element.classList.toggle("uppercase");
+  }
+
+  toggle?.addEventListener("click", toggleUppercase);
+</script>
