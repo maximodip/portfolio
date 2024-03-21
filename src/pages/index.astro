@@ -1,33 +1,5 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-
-import Navbar from "@/components/Navbar.astro";
-import Hero from "@/sections/Hero.astro";
-import Studies from "@/sections/Studies.astro";
-import Projects from "@/sections/Projects.astro";
-import About from "@/sections/About.astro";
-import Footer from "@/sections/Footer.astro";
+import App from "@/components/pages/App.astro";
 ---
 
-<Layout title="Maximo - Dev Web Portfolio for presentation">
-  <Navbar />
-  <main>
-    <Hero />
-    <Studies />
-    <Projects />
-    <About />
-  </main>
-  <Footer />
-</Layout>
-
-<script is:inline>
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", ({ matches }) => {
-      if (matches) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    });
-</script>
+<App />
