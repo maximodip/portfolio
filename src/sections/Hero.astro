@@ -5,6 +5,11 @@ import GitHub from "../icons/GitHub.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import Mail from "../icons/Mail.astro";
 import Badge from "@/components/Badge.astro";
+
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <SectionContainer id="hero" class="text-center sm:text-left text-pretty">
@@ -21,14 +26,14 @@ import Badge from "@/components/Badge.astro";
       class="text-6xl font-bold animate-fade-in animate-duration-normal"
       aria-hidden="true"
     >
-      Hey, i'm
+      {i18n.HERO_TITLE}
       <span class="text-gradient">Maximo Dip</span>
     </h1>
     <h2
       class="text-3xl font-semibold animate-fade-in animate-duration-slow"
       aria-hidden="true"
     >
-      Fullstack Engineer
+      {i18n.HERO_DESCRIPTION}
     </h2>
 
     <nav

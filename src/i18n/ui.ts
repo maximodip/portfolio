@@ -17,13 +17,14 @@ export const LANGUAGES: Record<
     flag: UnitedStatesFlag,
   },
   pt: {
-    code: "pt-br",
+    code: "pt",
     name: "Portugues",
     flag: BrasilFlag,
   },
 };
 
 export const defaultLang = "es";
+export const showDefaultLang = false;
 
 export const ui = {
   es: {
@@ -46,4 +47,8 @@ export const ui = {
   },
 } as const;
 
-export const showDefaultLang = false;
+export const routes = {
+  es: {},
+  en: {},
+  pt: {},
+};

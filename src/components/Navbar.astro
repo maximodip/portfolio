@@ -16,53 +16,50 @@ const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
 
-<header class="sticky">
-  <nav class="flex items-center justify-between">
-    <ul class="flex">
+<header class="sticky sm:top-5 top-1 z-10" id="header-nav">
+  <nav
+    class="flex items-center flex-col sm:flex-row gap-2 sm:justify-between p-2 rounded"
+  >
+    <ul class="flex gap-x-4 items-center">
       <li>
-        <a href={translatePath("/experience/")}>
+        <a
+          href={translatePath("/#experience")}
+          class="sm:hover:text-aqua2 sm:dark:hover:text-aqua hover:duration-150"
+        >
           {t("nav.experience")}
         </a>
       </li>
       <li>
-        <a href={translatePath("/projects/")}>
+        <a
+          href={translatePath("/#projects")}
+          class="sm:hover:text-aqua2 sm:dark:hover:text-aqua hover:duration-150"
+        >
           {t("nav.projects")}
         </a>
       </li>
       <li>
-        <a href={translatePath("/about/")}>
+        <a
+          href={translatePath("/#about")}
+          class="sm:hover:text-aqua2 sm:dark:hover:text-aqua hover:duration-150"
+        >
           {t("nav.about")}
         </a>
       </li>
       <li>
-        <a href={translatePath("/contact/")}>
+        <a
+          href="mailto:maximodipaparicio@gmail.com"
+          class="sm:hover:text-aqua2 sm:dark:hover:text-aqua hover:duration-150"
+        >
           {t("nav.contact")}
         </a>
       </li>
     </ul>
-    <div>
-      <MenuToggle />
-      <UppercaseToggle />
+    <div class="flex items-center gap-x-5">
       <LanguagePicker />
+      <UppercaseToggle />
       <ThemeToggle />
     </div>
   </nav>
-  <!-- <div class="hidden" id="responsiveMenu">
-    <nav class="navbar fixed top-16 right-0 left-0 w-fit m-auto sm:hidden">
-      {
-        navItems.map((link) => (
-          <a
-            class="relative block p-2
-          hover:text-aqua2 dark:hover:text-aqua text-sm"
-            aria-label={link.label}
-            href={link.url}
-          >
-            {link.title}
-          </a>
-        ))
-      }
-    </nav>
-  </div> -->
 </header>
 
 <script>
@@ -106,3 +103,17 @@ const translatePath = useTranslatedPath(lang);
     };
   });
 </script>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-gray-300/60 dark:bg-gray-800/60 ring-white/10;
+    }
+  }
+</style>
