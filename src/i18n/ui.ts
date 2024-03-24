@@ -18,7 +18,7 @@ export const LANGUAGES: Record<
   },
   pt: {
     code: "pt",
-    name: "Portugues",
+    name: "Português",
     flag: BrasilFlag,
   },
 };

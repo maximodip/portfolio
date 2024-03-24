@@ -22,7 +22,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
   >
     <button
       type="button"
-      class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+      class="inline-flex justify-start items-center w-fit gap-x-2 px-3 py-2"
       aria-expanded="true"
       aria-haspopup="true"
     >
@@ -30,7 +30,7 @@ const otherLocales = Object.values(LANGUAGES).filter(
       {currentLocaleData.name}
     </button>
     <ul
-      class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
+      class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-fit"
     >
       {
         otherLocales.map((locale) => (
