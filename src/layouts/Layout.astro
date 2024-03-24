@@ -27,18 +27,25 @@ const lang = getLangFromUrl(Astro.url);
     <title>{title}</title>
   </head>
   <body>
-    <div class="relative h-full w-full bg-slate-950">
-      <div
-        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"
-      >
-      </div>
-    </div>
     <div class="max-w-4xl px-2 lg:px-10 mx-auto">
       <slot />
     </div>
     <GoUpButton />
   </body>
 </html>
+
+<script is:inline>
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", ({ matches }) => {
+      if (matches) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    });
+</script>
+
 <style is:global>
   :root {
     color: #1f1f1f;

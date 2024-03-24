@@ -19,15 +19,3 @@ import Footer from "../../sections/Footer.astro";
   </main>
   <Footer />
 </Layout>
-
-<script is:inline>
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", ({ matches }) => {
-      if (matches) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    });
-</script>

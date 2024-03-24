@@ -17,9 +17,10 @@ const i18n = getI18N({ currentLocale });
   <div class="flex items-center gap-2 mb-4 justify-center sm:justify-start">
     <h2 class="text-4xl opacity-70">{i18n.SECTION_TITLE.PROJECTS}</h2>
     <Code />
-    <button
+    <a
+      href="/projects"
       class="dark:bg-aqua rounded-full px-2 text-bold sm:hover:opacity-75 transition bg-aqua2 text-slate-200 dark:text-black"
-      >{i18n.PROJECTS_SHOWALL}</button
+      >{i18n.PROJECTS_SHOWALL}</a
     >
   </div>
   <div class="flex flex-col gap-y-16">
