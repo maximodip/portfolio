@@ -1,0 +1,20 @@
+{
+  "HERO_TITLE": "Ei, eu estou",
+  "HERO_DESCRIPTION": "Programador Fullstack",
+  "SECTION_TITLE": {
+    "STUDIES": "Estudos",
+    "PROJECTS": "Projetos",
+    "ABOUT": "Sobre mim"
+  },
+  "STUDIES_DEGREE": "Técnico Superior em Programação",
+  "ABOUT": {
+    "ABOUT_DESCRIPTION_1": "Meu nome é <span> Maximo Dip Aparicio</span> mas meus amigos me chamam de Dip. Comecei a programar há cerca de 5 anos, quando tinha 15 anos.",
+    "ABOUT_DESCRIPTION_2": "Tenho <span> desenvolvido projetos</span> enquanto faço minha carreira universitária como programador. Esses são os que você pode ver acima, na seção <i>projetos</i>.",
+    "ABOUT_DESCRIPTION_3": "No momento estou em <span> busca de oportunidades.</span> Meus objetivos são aprimorar minhas habilidades como desenvolvedor, aprendendo novas tecnologias e criando ótimos softwares."
+  },
+  "PROJECTS": {
+    "PROJECT_DESCRIPTION_1": "",
+    "PROJECT_DESCRIPTION_2": ""
+  },
+  "PROJECTS_SHOWALL": "Mostre tudo"
+}

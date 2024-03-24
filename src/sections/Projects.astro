@@ -1,69 +1,26 @@
 ---
 import GitHub from "@/icons/GitHub.astro";
-import Tailwind from "@/icons/Tailwind.astro";
-import React from "@/icons/React.astro";
-import MySql from "@/icons/MySql.astro";
-import Express from "@/icons/Express.astro";
-import Boostrap from "@/icons/Bootstrap.astro";
-import LinkButton from "@/components/LinkButton.astro";
-import SectionContainer from "@/components/SectionContainer.astro";
 import Code from "@/icons/Code.astro";
 
-const TAGS = {
-  TAILWIND: {
-    name: "Tailwind",
-    class:
-      "dark:bg-[#003159] dark:text-white duration-200 border border-[#1f1f1f]",
-    icon: Tailwind,
-  },
-  REACT: {
-    name: "React",
-    class:
-      "dark:bg-[#23272f] dark:text-white duration-200 border border-[#1f1f1f]",
-    icon: React,
-  },
-  MYSQL: {
-    name: "MySql",
-    class:
-      "dark:bg-[#23272f] dark:text-white duration-200 border border-[#1f1f1f]",
-    icon: MySql,
-  },
-  EXPRESS: {
-    name: "Express",
-    class:
-      "dark:bg-[#23272f] dark:text-white duration-200 border border-[#1f1f1f]",
-    icon: Express,
-  },
-  BOOSTRAP: {
-    name: "Boostrap",
-    class:
-      "dark:bg-[#23272f] dark:text-white duration-200 border border-[#1f1f1f]",
-    icon: Boostrap,
-  },
-};
-const PROJECTS = [
-  {
-    title: "Stock App",
-    description:
-      "My application offers a seamless and user-friendly experience, empowering users with the ability to add, edit, and delete various product types across different categories, all in one centralized platform.",
-    github: "https://github.com/hugodanielcabral/proyectoprogramacion3",
-    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.BOOSTRAP, TAGS.MYSQL],
-  },
-  {
-    title: "Dog 360",
-    description:
-      "Tailored to meet the unique needs of veterinary practices, our application seamlessly integrates appointment scheduling, detailed dog profiles, and user roles for a comprehensive and efficient solution.",
-    github: "https://github.com/hugodanielcabral/dog360",
-    image: "/projects/dog360.webp",
-    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.TAILWIND, TAGS.MYSQL],
-  },
-];
+import LinkButton from "@/components/LinkButton.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+
+import { PROJECTS } from "@/lib/index";
+
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <SectionContainer id="projects" class="text-center sm:text-left text-pretty">
   <div class="flex items-center gap-2 mb-4 justify-center sm:justify-start">
-    <h2 class="text-4xl opacity-70">Projects</h2>
+    <h2 class="text-4xl opacity-70">{i18n.SECTION_TITLE.PROJECTS}</h2>
     <Code />
+    <button
+      class="dark:bg-aqua rounded-full px-2 text-bold sm:hover:opacity-75 transition bg-aqua2 text-slate-200 dark:text-black"
+      >{i18n.PROJECTS_SHOWALL}</button
+    >
   </div>
   <div class="flex flex-col gap-y-16">
     {
@@ -87,9 +44,7 @@ const PROJECTS = [
                 ))}
               </ul>
 
-              <div class="mt-2 text-gray-700 dark:text-gray-400">
-                {description}
-              </div>
+              <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
               <footer class="flex items-end justify-start mt-4 gap-x-4">
                 {github && (
                   <LinkButton href={github}>

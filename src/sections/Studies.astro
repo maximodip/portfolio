@@ -1,11 +1,15 @@
 ---
 import SectionContainer from "@/components/SectionContainer.astro";
 import Book from "@/icons/Book.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <SectionContainer id="experience" class="text-center sm:text-left text-pretty">
   <div class="flex items-center gap-2 mb-4 justify-center sm:justify-start">
-    <h2 class="text-4xl opacity-70">Studies</h2>
+    <h2 class="text-4xl opacity-70">{i18n.SECTION_TITLE.STUDIES}</h2>
     <Book />
   </div>
   <article class="flex flex-col">
@@ -13,7 +17,7 @@ import Book from "@/icons/Book.astro";
       Universidad Tecnologica Nacional - UTN
     </h1>
     <h2 class="font-semibold text-xl">
-      Associate degree, Computer Programming
+      {i18n.STUDIES_DEGREE}
     </h2>
     <span class="opacity-55">2022 - 2024</span>
   </article>
