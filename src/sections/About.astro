@@ -8,14 +8,28 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
-<SectionContainer id="about" class="text-center sm:text-left text-pretty">
+<SectionContainer id="about" class="">
   <div class="flex items-center gap-2 mb-4 justify-center sm:justify-start">
     <h2 class="text-4xl opacity-70">{i18n.SECTION_TITLE.ABOUT}</h2>
     <ProfileCheck />
   </div>
-  <div class="text-pretty text-xl max-w-xl gap-y-6 flex flex-col">
-    <p set:html={i18n.ABOUT.ABOUT_DESCRIPTION_1} class="font-semibold" />
-    <p set:html={i18n.ABOUT.ABOUT_DESCRIPTION_2} class="font-semibold" />
-    <p set:html={i18n.ABOUT.ABOUT_DESCRIPTION_3} class="font-semibold" />
+  <div
+    class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+  >
+    <div
+      class="[&>p]:mb-4 [&>p>strong]:text-aqua2 dark:[&>p>strong]:text-aqua [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    >
+      <p set:html={i18n.ABOUT.ABOUT_DESCRIPTION_1} class="font-semibold" />
+      <p set:html={i18n.ABOUT.ABOUT_DESCRIPTION_2} class="font-semibold" />
+      <p set:html={i18n.ABOUT.ABOUT_DESCRIPTION_3} class="font-semibold" />
+    </div>
+    <img
+      src="/yo.png"
+      alt="Máximo Dip "
+      class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 aspect-square rounded-2xl bg-black/20 dark:bg-aqua-500/5 ring-1 ring-black/70 dark:ring-white/20"
+      style="object-position: 50% 50%"
+      width="200"
+      height="200"
+    />
   </div>
 </SectionContainer>
