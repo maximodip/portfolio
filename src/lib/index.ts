@@ -6,9 +6,9 @@ import Boostrap from "@/icons/Bootstrap.astro";
 
 export const navItems = [
   {
-    title: "Experience",
-    label: "experience",
-    url: "/#experience",
+    title: "Studies",
+    label: "studies",
+    url: "/#studies",
   },
   {
     title: "Projects",

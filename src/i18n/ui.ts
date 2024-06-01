@@ -28,19 +28,19 @@ export const showDefaultLang = false;
 
 export const ui = {
   es: {
-    "nav.experience": "Experiencia",
+    "nav.studies": "Estudios",
     "nav.projects": "Proyectos",
     "nav.about": "Sobre mí",
     "nav.contact": "Contacto",
   },
   en: {
-    "nav.experience": "Experience",
+    "nav.studies": "Studies",
     "nav.projects": "Projects",
     "nav.about": "About",
     "nav.contact": "Contact",
   },
   pt: {
-    "nav.experience": "Experiência",
+    "nav.studies": "Estudos",
     "nav.projects": "Projetos",
     "nav.about": "Sobre mim",
     "nav.contact": "Contato",
