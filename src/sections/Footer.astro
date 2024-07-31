@@ -1,5 +1,9 @@
 ---
 import SectionContainer from "@/components/SectionContainer.astro";
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 ---
 
 <SectionContainer>
@@ -22,7 +26,9 @@ import SectionContainer from "@/components/SectionContainer.astro";
           >
         </li>
         <li>
-          <a href="/CV.pdf" target="_blank" class="hover:underline">Resume</a>
+          <a href="/CV.pdf" target="_blank" class="hover:underline"
+            >{i18n.RESUME}</a
+          >
         </li>
       </ul>
     </div>
