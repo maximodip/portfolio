@@ -24,7 +24,7 @@ const i18n = getI18N({ currentLocale });
   </div>
   <div class="flex flex-col gap-y-16">
     {
-      PROJECTS.map(({ image, title, description, tags, github }) => (
+      PROJECTS.map(({ image, title, description, tags, github, link }) => (
         <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
           <div class="w-full md:w-1/2 md:max-w-lg">
             <h3 class="text-2xl font-semibold text-aqua2 dark:text-aqua">
@@ -45,11 +45,17 @@ const i18n = getI18N({ currentLocale });
               </ul>
 
               <p class="mt-2 text-gray-700 dark:text-gray-400">{description}</p>
-              <footer class="flex items-end justify-start mt-4 gap-x-4">
+              <footer class="flex items-center justify-start mt-4 gap-x-4">
                 {github && (
                   <LinkButton href={github}>
                     <GitHub class="size-6" />
                     Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <span class="">🚀</span>
+                    Live
                   </LinkButton>
                 )}
               </footer>
