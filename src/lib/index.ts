@@ -114,6 +114,14 @@ export const PROJECTS = [
     tags: [TAGS.NEXTJS, TAGS.PRISMA, TAGS.SHADCN, TAGS.MYSQL],
   },
   {
+    title: "Unit Converter",
+    description: "A web app to conver US to Metric.",
+    github: "https://github.com/maximodip/unit-converter",
+    image: "/projects/unit-converter.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.SHADCN],
+    link: "https://unit-converter-sable-nine.vercel.app/",
+  },
+  {
     title: "Stock App",
     description:
       "My application offers a seamless and user-friendly experience, empowering users with the ability to add, edit, and delete various product types across different categories, all in one centralized platform.",
