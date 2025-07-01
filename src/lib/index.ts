@@ -32,7 +32,7 @@ export const navItems = [
   },
 ];
 
-const TAGS = {
+export const TAGS = {
   SHADCN: {
     name: "Shadcn",
     class:
@@ -94,46 +94,3 @@ const TAGS = {
     icon: Boostrap,
   },
 };
-
-export const PROJECTS = [
-  {
-    title: "Marcelo Muebles",
-    description:
-      "Fornitures Showroom for clients who wants to see the work done.",
-    github: "https://github.com/maximodip/marcelo-muebles",
-    image: "/projects/marcelo-muebles.jpg",
-    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.JAVASCRIPT],
-    link: "https://marceloaparicio.com",
-  },
-  {
-    title: "Cuentas Farmacia",
-    description:
-      "A web app to manage the accounts of a pharmacy. It has the products with price and a dashboard with dates to manage the accounts.",
-    github: "https://github.com/maximodip/prisma-farmacia",
-    image: "/projects/cuentas-sisa.png",
-    tags: [TAGS.NEXTJS, TAGS.PRISMA, TAGS.SHADCN, TAGS.MYSQL],
-  },
-  {
-    title: "Unit Converter",
-    description: "A web app to conver US to Metric.",
-    github: "https://github.com/maximodip/unit-converter",
-    image: "/projects/unit-converter.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.SHADCN],
-    link: "https://unit-converter-sable-nine.vercel.app/",
-  },
-  {
-    title: "Stock App",
-    description:
-      "My application offers a seamless and user-friendly experience, empowering users with the ability to add, edit, and delete various product types across different categories, all in one centralized platform.",
-    github: "https://github.com/hugodanielcabral/proyectoprogramacion3",
-    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.BOOSTRAP, TAGS.MYSQL],
-  },
-  {
-    title: "Dog 360",
-    description:
-      "Tailored to meet the unique needs of veterinary practices, our application seamlessly integrates appointment scheduling, detailed dog profiles, and user roles for a comprehensive and efficient solution.",
-    github: "https://github.com/hugodanielcabral/dog360",
-    image: "/projects/dog360.webp",
-    tags: [TAGS.REACT, TAGS.EXPRESS, TAGS.TAILWIND, TAGS.MYSQL],
-  },
-];

@@ -1,0 +1,33 @@
+import type { I18nTranslations } from "@/i18n/types";
+
+export const english: I18nTranslations = {
+  HERO_TITLE: "Hey, i'm",
+  HERO_DESCRIPTION: "Fullstack Engineer",
+  SECTION_TITLE: {
+    STUDIES: "Studies",
+    PROJECTS: "Projects",
+    ABOUT: "About me",
+  },
+  STUDIES_DEGREE: "Associate degree, Computer Programming",
+  ABOUT: {
+    ABOUT_DESCRIPTION_1:
+      "My name is <strong> Maximo Dip Aparicio</strong> but my friends call me Dip and i start to programming in 2022.",
+    ABOUT_DESCRIPTION_2:
+      "I've been <strong> developing projects</strong> while doing my university carrer as a programmer. Those are the ones you can see above, on the <i>projects</i> section.",
+    ABOUT_DESCRIPTION_3:
+      "At the moment, i'm <strong> looking for opportunities.</strong> My goals are to improve my skills as a developer, learning new technologies and creating great software.",
+  },
+  PROJECTS: {
+    MUEBLES_DESCRIPTION:
+      "Fornitures Showroom for clients who wants to see the work done.",
+    CUENTAS_FARMACIA_DESCRIPTION:
+      "A web app to manage the accounts of a pharmacy. It has the products with price and a dashboard with dates to manage the accounts.",
+    UNIT_CONVERTER_DESCRIPTION: "A web app to convert units from US to Metric.",
+    STOCK_APP_DESCRIPTION:
+      "My application offers a seamless and user-friendly experience, empowering users with the ability to add, edit, and delete various product types across different categories, all in one centralized platform.",
+    DOG_BREEDS_DESCRIPTION:
+      "Tailored to meet the unique needs of veterinary practices, our application seamlessly integrates appointment scheduling, detailed dog profiles, and user roles for a comprehensive and efficient solution.",
+  },
+  PROJECTS_SHOWALL: "Show all",
+  RESUME: "Resume",
+};

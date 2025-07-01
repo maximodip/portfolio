@@ -1,6 +1,7 @@
-import portugues from "@/i18n/pt.json";
-import english from "@/i18n/en.json";
-import spanish from "@/i18n/es.json";
+import { portugues } from "@/i18n/pt";
+import { english } from "@/i18n/en";
+import { spanish } from "@/i18n/es";
+import type { I18nTranslations } from "@/i18n/types";
 
 const LANG = {
   PORTUGUES: "pt",
@@ -12,8 +13,8 @@ export const getI18N = ({
   currentLocale = "es",
 }: {
   currentLocale: string | undefined;
-}) => {
-  if (currentLocale === LANG.PORTUGUES) return { ...spanish, ...portugues };
-  if (currentLocale === LANG.ENGLISH) return { ...spanish, ...english };
+}): I18nTranslations => {
+  if (currentLocale === LANG.PORTUGUES) return portugues;
+  if (currentLocale === LANG.ENGLISH) return english;
   return spanish;
 };
