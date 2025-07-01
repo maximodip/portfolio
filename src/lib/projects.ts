@@ -10,19 +10,19 @@ const PROJECTS_DATA = [
     link: "https://unit-converter-sable-nine.vercel.app/",
   },
   {
-    title: "Cuentas Farmacia",
-    descriptionKey: "PROJECTS.CUENTAS_FARMACIA_DESCRIPTION",
-    github: "https://github.com/maximodip/prisma-farmacia",
-    image: "/projects/cuentas-sisa.png",
-    tags: [TAGS.NEXTJS, TAGS.PRISMA, TAGS.SHADCN, TAGS.MYSQL],
-  },
-  {
     title: "Marcelo Muebles",
     descriptionKey: "PROJECTS.MUEBLES_DESCRIPTION",
     github: "https://github.com/maximodip/marcelo-muebles",
     image: "/projects/marcelo-muebles.jpg",
     tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.JAVASCRIPT],
     link: "https://marcelo-muebles-maximo-dips-projects.vercel.app/",
+  },
+  {
+    title: "Cuentas Farmacia",
+    descriptionKey: "PROJECTS.CUENTAS_FARMACIA_DESCRIPTION",
+    github: "https://github.com/maximodip/prisma-farmacia",
+    image: "/projects/cuentas-sisa.png",
+    tags: [TAGS.NEXTJS, TAGS.PRISMA, TAGS.SHADCN, TAGS.MYSQL],
   },
   {
     title: "Stock App",
