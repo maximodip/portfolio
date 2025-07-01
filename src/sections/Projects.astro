@@ -21,14 +21,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 
-const translatedProjects = getTranslatedProjects((key: string) => {
-  // Handle nested keys like "PROJECTS.UNIT_CONVERTER_DESCRIPTION"
-  const parts = key.split(".");
-  if (parts.length === 2 && parts[0] === "PROJECTS") {
-    return i18n.PROJECTS[parts[1] as keyof typeof i18n.PROJECTS];
-  }
-  return key;
-});
+const translatedProjects = getTranslatedProjects(i18n);
 ---
 
 <SectionContainer id="projects" class="text-center sm:text-left text-pretty">
