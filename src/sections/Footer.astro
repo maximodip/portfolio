@@ -10,7 +10,8 @@ const i18n = getI18N({ currentLocale });
   <footer class="py-6">
     <div class="w-full md:flex md:items-center md:justify-between">
       <span class="text-md sm:text-center"
-        >© 2024 <a
+        >© {new Date().getFullYear()}
+        <a
           href="https://www.linkedin.com/in/maximodipaparicio/"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,11 +26,6 @@ const i18n = getI18N({ currentLocale });
             target="_blank">Whatsapp</a
           >
         </li>
-        <!-- <li>
-          <a href="/CV.pdf" target="_blank" class="hover:underline"
-            >{i18n.RESUME}</a
-          >
-        </li> -->
       </ul>
     </div>
   </footer>

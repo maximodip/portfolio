@@ -1,0 +1,171 @@
+---
+import GitHub from "@/icons/GitHub.astro";
+import Code from "@/icons/Code.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import ProjectSkeleton from "@/components/ProjectSkeleton.astro";
+
+import { getI18N } from "@/i18n";
+import {
+  getTranslatedProjects,
+  getTranslatedProjectsSync,
+} from "@/lib/projects";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+// Intentar obtener proyectos desde GitHub, con fallback a proyectos estáticos
+let translatedProjects;
+let isLoading = false;
+
+try {
+  translatedProjects = await getTranslatedProjects(i18n);
+} catch (error) {
+  console.error("Error loading GitHub projects, using static fallback:", error);
+  translatedProjects = getTranslatedProjectsSync(i18n);
+}
+---
+
+<div class="flex flex-col gap-y-16" id="projects-container">
+  <!-- Skeleton loading inicial (se oculta con JS) -->
+  <div id="projects-skeleton" class="flex flex-col gap-y-16">
+    <ProjectSkeleton />
+    <ProjectSkeleton />
+    <ProjectSkeleton />
+  </div>
+
+  <!-- Proyectos reales (se muestran con JS después de cargar) -->
+  <div
+    id="projects-content"
+    class="flex flex-col gap-y-16 opacity-0 transition-opacity duration-500"
+    style="display: none;"
+  >
+    {
+      translatedProjects.map(
+        ({
+          image,
+          title,
+          description,
+          tags,
+          github,
+          link,
+          githubData,
+          featured,
+        }) => (
+          <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2 md:max-w-lg">
+              <div class="flex items-center gap-2 mb-2">
+                <h3 class="text-2xl font-semibold text-aqua2 dark:text-aqua">
+                  {title}
+                </h3>
+                {featured && (
+                  <span class="px-2 py-1 text-xs font-medium bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
+                    ⭐ Destacado
+                  </span>
+                )}
+              </div>
+
+              {/* Información de GitHub si está disponible */}
+              {githubData && (
+                <div class="flex items-center gap-4 mb-3 text-sm text-gray-600 dark:text-gray-400">
+                  {githubData.stars > 0 && (
+                    <span class="flex items-center gap-1">
+                      ⭐ {githubData.stars}
+                    </span>
+                  )}
+                  {githubData.forks > 0 && (
+                    <span class="flex items-center gap-1">
+                      🍴 {githubData.forks}
+                    </span>
+                  )}
+                  {githubData.language && (
+                    <span class="flex items-center gap-1">
+                      💻 {githubData.language}
+                    </span>
+                  )}
+                </div>
+              )}
+
+              <div class="flex flex-wrap mt-2 justify-center sm:justify-start">
+                <ul class="flex flex-row mb-2 gap-x-2">
+                  {tags.map((tag) => (
+                    <li>
+                      <span
+                        class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                      >
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <p class="mt-2 text-gray-700 dark:text-gray-400">
+                  {description}
+                </p>
+                <footer class="flex items-center justify-start mt-4 gap-x-4">
+                  {github && (
+                    <LinkButton href={github}>
+                      <GitHub class="size-6" />
+                      Code
+                    </LinkButton>
+                  )}
+                  {link && (
+                    <LinkButton href={link}>
+                      <span class="">🚀</span>
+                      Live
+                    </LinkButton>
+                  )}
+                </footer>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              {image && (
+                <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                  <img
+                    alt={`Captura de pantalla del proyecto ${image}`}
+                    class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+                    loading="lazy"
+                    src={image}
+                  />
+                </div>
+              )}
+            </div>
+          </article>
+        )
+      )
+    }
+  </div>
+</div>
+
+<script>
+  // Mostrar skeleton inicialmente y luego transicionar al contenido real
+  document.addEventListener("DOMContentLoaded", () => {
+    const skeleton = document.getElementById("projects-skeleton");
+    const content = document.getElementById("projects-content");
+
+    // Simular tiempo de carga mínimo para mostrar skeleton
+    setTimeout(() => {
+      if (skeleton && content) {
+        // Preparar el contenido para mostrarse
+        content.style.display = "flex";
+        content.style.flexDirection = "column";
+        content.style.gap = "4rem"; // gap-y-16
+
+        // Pequeño delay para que el display: flex se aplique
+        setTimeout(() => {
+          // Ocultar skeleton con fade out
+          skeleton.style.opacity = "0";
+          skeleton.style.transition = "opacity 300ms ease-out";
+
+          // Mostrar contenido con fade in
+          content.style.opacity = "1";
+
+          // Remover skeleton del DOM después de la transición
+          setTimeout(() => {
+            skeleton.style.display = "none";
+          }, 300);
+        }, 50);
+      }
+    }, 1200); // 1.2s para mostrar el skeleton (más tiempo para ver la animación)
+  });
+</script>

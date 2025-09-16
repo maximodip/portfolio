@@ -2,7 +2,7 @@ import type { I18nTranslations } from "@/i18n/types";
 
 export const spanish: I18nTranslations = {
   HERO_TITLE: "Hola👋, soy",
-  HERO_DESCRIPTION: "Desarrollador Fullstack",
+  HERO_DESCRIPTION: "Full Stack Developer & Founder de Maximize IA",
   SECTION_TITLE: {
     STUDIES: "Estudios",
     PROJECTS: "Proyectos",
@@ -11,11 +11,11 @@ export const spanish: I18nTranslations = {
   STUDIES_DEGREE: "Técnico Universitario en Programación",
   ABOUT: {
     ABOUT_DESCRIPTION_1:
-      "Mi nombre es <strong> Máximo Dip Aparicio</strong> pero mis amigos me llaman Dip y empecé a programar en 2022.",
+      "<strong>Full Stack Developer</strong> con 3 años de experiencia en desarrollo de aplicaciones web y 1 año en automatizaciones y chatbots con IA. <strong>Founder de Maximize IA</strong>, agencia de soluciones digitales orientada a optimizar procesos y potenciar negocios con inteligencia artificial.",
     ABOUT_DESCRIPTION_2:
-      "He estado <strong> desarrollando proyectos</strong> mientras realizo mi carrera universitaria como programador. Esos son los que puedes ver arriba, en la sección <i>proyectos</i>.",
+      "Como <strong>Founder de MaximizeIA</strong>, creo asistentes virtuales y automatizaciones con IA para negocios locales y PyMEs. Implemento flujos de ventas, atención al cliente y gestión de datos vía APIs, n8n, Supabase y OpenAI, logrando ahorrar <strong>70% - 90% del tiempo</strong> a mis clientes.",
     ABOUT_DESCRIPTION_3:
-      "Por el momento estoy <strong> buscando oportunidades.</strong> Mis objetivos son mejorar mis habilidades como desarrollador, aprender nuevas tecnologías y crear software excelente.",
+      "Mi experiencia incluye desarrollo con <strong>Next.js, React, TailwindCSS</strong>, sistemas de gestión con Supabase y MySQL, y formación en la <strong>Universidad Tecnológica Nacional (UTN)</strong> como Técnico Universitario en Programación.",
   },
   PROJECTS: {
     MUEBLES_DESCRIPTION:
@@ -28,6 +28,10 @@ export const spanish: I18nTranslations = {
       "Mi aplicación ofrece una experiencia fluida y fácil de usar, empoderando a los usuarios con la capacidad de agregar, editar y eliminar varios tipos de productos en diferentes categorías, todo en una plataforma centralizada.",
     DOG_BREEDS_DESCRIPTION:
       "Adaptada para satisfacer las necesidades únicas de las prácticas veterinarias, nuestra aplicación integra perfectamente la programación de citas, perfiles detallados de perros y roles de usuario para una solución integral y eficiente.",
+    MAXIMIZE_IA_DESCRIPTION:
+      "Agencia de soluciones digitales especializada en automatizaciones con IA, chatbots y asistentes virtuales para optimizar procesos empresariales y potenciar negocios locales.",
+    BC_PROPIEDADES_DESCRIPTION:
+      "Sistema integral de gestión inmobiliaria con catálogo de propiedades, filtros avanzados y panel administrativo para la gestión eficiente de bienes raíces.",
   },
   PROJECTS_SHOWALL: "Ver todos",
   RESUME: "Curriculum vitae",

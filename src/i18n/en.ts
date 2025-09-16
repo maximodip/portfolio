@@ -2,7 +2,7 @@ import type { I18nTranslations } from "@/i18n/types";
 
 export const english: I18nTranslations = {
   HERO_TITLE: "Hey, i'm",
-  HERO_DESCRIPTION: "Fullstack Engineer",
+  HERO_DESCRIPTION: "Full Stack Developer & Founder of Maximize IA",
   SECTION_TITLE: {
     STUDIES: "Studies",
     PROJECTS: "Projects",
@@ -11,11 +11,11 @@ export const english: I18nTranslations = {
   STUDIES_DEGREE: "Associate degree, Computer Programming",
   ABOUT: {
     ABOUT_DESCRIPTION_1:
-      "My name is <strong> Maximo Dip Aparicio</strong> but my friends call me Dip and i start to programming in 2022.",
+      "<strong>Full Stack Developer</strong> with 3 years of experience in web application development and 1 year in AI automations and chatbots. <strong>Founder of Maximize IA</strong>, a digital solutions agency focused on optimizing processes and empowering businesses with artificial intelligence.",
     ABOUT_DESCRIPTION_2:
-      "I've been <strong> developing projects</strong> while doing my university carrer as a programmer. Those are the ones you can see above, on the <i>projects</i> section.",
+      "As <strong>Founder of MaximizeIA</strong>, I create virtual assistants and AI automations for local businesses and SMEs. I implement sales flows, customer service, and data management via APIs, n8n, Supabase, and OpenAI, achieving <strong>70% - 90% time savings</strong> for my clients.",
     ABOUT_DESCRIPTION_3:
-      "At the moment, i'm <strong> looking for opportunities.</strong> My goals are to improve my skills as a developer, learning new technologies and creating great software.",
+      "My experience includes development with <strong>Next.js, React, TailwindCSS</strong>, management systems with Supabase and MySQL, and education at <strong>Universidad Tecnológica Nacional (UTN)</strong> as a University Technician in Programming.",
   },
   PROJECTS: {
     MUEBLES_DESCRIPTION:
@@ -27,6 +27,10 @@ export const english: I18nTranslations = {
       "My application offers a seamless and user-friendly experience, empowering users with the ability to add, edit, and delete various product types across different categories, all in one centralized platform.",
     DOG_BREEDS_DESCRIPTION:
       "Tailored to meet the unique needs of veterinary practices, our application seamlessly integrates appointment scheduling, detailed dog profiles, and user roles for a comprehensive and efficient solution.",
+    MAXIMIZE_IA_DESCRIPTION:
+      "Digital solutions agency specialized in AI automations, chatbots and virtual assistants to optimize business processes and empower local businesses.",
+    BC_PROPIEDADES_DESCRIPTION:
+      "Comprehensive real estate management system with property catalog, advanced filters and administrative panel for efficient real estate management.",
   },
   PROJECTS_SHOWALL: "Show all",
   RESUME: "Resume",
